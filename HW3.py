@@ -1,5 +1,6 @@
 from objects import Point, RunOrtho
 import pandas as pd
+import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -88,5 +89,16 @@ if __name__ == '__main__':
 	print('Parcel Sides')
 	print(hazitot)
 	hazitot.round(3).to_csv('hazitot.csv', index=False)
+
+	cordinates.loc
+
+
+	def PolyArea(x, y):
+		return 0.5 * np.abs(np.dot(x, np.roll(y, 1)) - np.dot(y, np.roll(x, 1)))
+
+
+	area = PolyArea(cordinates['E(m)'].to_numpy(),
+	                cordinates['N(m)'].to_numpy())
+	print(area)
 
 	print('stop')
